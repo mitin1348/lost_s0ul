@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Загублена душа — Імʼя автора</title>
+  <meta name="description" content="Темне філософське фентезі з елементами епосу та психологічної драми." />
+
+  <!--
+    📕 КНИЖКОВИЙ ВАЙБ XIX СТОЛІТТЯ
+    Основні ідеї стилю:
+    — бордові та винні відтінки
+    — ефект старого паперу
+    — спокійна, літературна подача
+  -->
+
+  <style>
+    :root {
+      --bg: #230d12;
+      --paper: #f3e7cf;
+      --ink: #2b1b1b;
+      --accent: #8c1f2d;
+      --accent-dark: #5a0f18;
+      --muted: #7a4a4a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #5a1a22, transparent 55%), var(--bg);
+      color: var(--paper);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(243,231,207,.08), rgba(243,231,207,.02));
+      border: 1px solid rgba(243,231,207,.2);
+      padding: 32px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 4vw, 52px);
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      color: #e8dcc2;
+      font-size: 18px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--paper);
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .cover {
+      border: 1px solid rgba(243,231,207,.2);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    section { margin-top: 72px; }
+
+    h2 {
+      border-bottom: 1px solid rgba(243,231,207,.3);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    .paper {
+      background: var(--paper);
+      color: var(--ink);
+      padding: 32px;
+    }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      margin-top: 72px;
+      text-align: center;
+      font-size: 14px;
+      opacity: .7;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Загублена душа</h1>
+        <p class="lead">
+          Темне філософське фентезі про дівчину, що опинилася в іншому світі.
+          Пошук відповідей приводить її до істин, до яких вона була не готова.
+        </p>
+        <div style="margin-top:24px;">
+          <a class="btn" href="#read">Читати розділи</a>
+        </div>
+      </div>
+
+      <div class="cover">
+        <!--
+          🖼️ АРТ ГОЛОВНОЇ ГЕРОЇНІ (ЕЛІС)
+          Папка: images
+          Назва файлу: alice.jpg / alice.png
+        -->
+        <img src="images/book.jpg" alt="Еліс — головна героїня"
+             style="width:75%; aspect-ratio:2/3; object-fit:cover; border:1px solid rgba(243,231,207,.3);" />
+      </div>
+    </div>
+
+    <section>
+      <h2>Про книгу</h2>
+      <div class="paper">
+        <p>
+          Еліс — мандрівниця та торговка, спостерігачка чужих доль.
+          Вона намагається здаватися сильною, приховуючи сумніви й страхи.
+        </p>
+        <p>
+          Потрапивши в інший світ, вона шукає відповідь на головне питання — як і навіщо.
+          Та що далі вона просувається, то ясніше стає:
+          істина значно складніша, ніж здається.
+        </p>
+      </div>
+    </section>
+
+    <section id="read">
+      <h2>Читання</h2>
+      <div class="paper">
+
+        <!--
+          ⚠️ УВАГА
+          ТУТ ЗМІНЮЄТЬСЯ КІЛЬКІСТЬ РОЗДІЛІВ
+          Просто оновлюй число нижче
+        -->
+        <p><strong>Доступно глави:</strong> 7</p>
+
+        <p class="muted">
+          Усі глави доступні за посиланням (Google Drive):
+          <br>
+          <a href="https://drive.google.com/drive/folders/14ORrlXgBVt4ZLZhu6HzcMPMXTl2jsYpR?usp=sharing" target="_blank">посилання на Google Drive</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Автор</h2>
+      <div class="paper">
+        <strong>Тиндюк Тимур</strong>
+        <p class="muted">
+          Автор філософського фентезі. «Загублена душа» — історія
+          про пошук сенсу, особистості та правди, прихованої між світами.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    © <span id="year"></span> Тиндюк Тимур
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
